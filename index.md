@@ -1,5 +1,5 @@
 ---
-title: Powering the World’s Largest Marketplace — A Dive into Amazon’s Ecosystem through Algorithms
+title: PrimeLogic
 author: Sanjana Patil
 ---
 
@@ -12,31 +12,29 @@ author: Sanjana Patil
 
 ---
 
-# 🛒 Powering the World’s Largest Marketplace — A Dive into Amazon’s Ecosystem through Algorithms
+# Powering the World’s Largest Marketplace — A Dive into Amazon’s Ecosystem through Algorithms
 
-## 📑 Table of Contents
+## Table of Contents
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 
 ---
 
-## 🧭 Introduction
+## Introduction
 
 In the digital era, Amazon has become synonymous with e-commerce, cloud computing, and intelligent logistics. What began as an online bookstore is now a global tech behemoth, consistently shaping the way consumers interact with technology, retail, and digital services. Today, Amazon operates one of the most **intelligent and optimized ecosystems** in the world.
 
-Some highlights of Amazon’s scale and influence in 2025 include:
-
-- 💰 **Valuation**: Over **$2.166 trillion**, placing it among the **top 5 most valuable companies** globally.
-- 👥 **User Base**: More than **310 million active users**, with **220+ million Amazon Prime subscribers**.
-- 🌍 **Global Reach**: Ships to **100+ countries**, dominating **37.6% of the U.S. e-commerce market**.
-- 💸 **Financial Power**: **$650.3 billion** in annual revenue and **$88.5 billion** invested in R&D.
-- ⚙️ **AI Leadership**: Heavy investments in **Trainium2 AI chips**, healthcare AI, and AWS services.
+- 📈 Amazon is valued at over **$2.166 trillion**, making it one of the top 5 most valuable companies globally.
+- 👥 It serves **310+ million active users**, with over 220 million Amazon Prime subscribers worldwide.
+- 🌎 Amazon ships to **100+ countries** and commands **37.6% of the U.S. e-commerce market**, well ahead of Walmart and Apple.
+- 💰 With **$650.3 billion** in annual revenue and **$88.5 billion** in R&D spend, Amazon is setting benchmarks in AI, cloud infrastructure, and logistics.
+- ⚙️ Heavy investments in **Trainium2 AI chips**, healthcare AI, and AWS services.
 
 From product searches to last-mile delivery, Amazon relies on **data structures and algorithms (DSA)** to manage and optimize its massive operations. This portfolio explores how these computational tools drive business success across various domains of Amazon.
 
 ---
 
-## 🌐 Amazon’s Core Services and Domains
+## Amazon’s Core Services and Domains
 
 ### 🛍️ E-Commerce Platform
 - Amazon.com / Amazon.in  
