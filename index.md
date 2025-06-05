@@ -6,7 +6,7 @@ author: Sanjana Patil
 **Name:** Sanjana Patil  
 **SRN:** 01FE22BCS069  
 **Course Name:** Algorithmic Problem Solving  
-**Course Code:** 23ECSE309  
+**Course Code:** 24ECSE309  
 **University:** KLE Technological University, Hubballi-31  
 **Portfolio Domain:** Amazon  
 
@@ -29,6 +29,8 @@ In the digital era, Amazon has become synonymous with e-commerce, cloud computin
 - 🌎 Amazon ships to **100+ countries** and commands **37.6% of the U.S. e-commerce market**, well ahead of Walmart and Apple.
 - 💰 With **$650.3 billion** in annual revenue and **$88.5 billion** in R&D spend, Amazon is setting benchmarks in AI, cloud infrastructure, and logistics.
 - ⚙️ Heavy investments in **Trainium2 AI chips**, healthcare AI, and AWS services.
+
+> 🔎 *Source:* [Amazon Facts & Statistics – Investing.com](https://www.investing.com/academy/statistics/amazon-facts/)
 
 From product searches to last-mile delivery, Amazon relies on **data structures and algorithms (DSA)** to manage and optimize its massive operations. This portfolio explores how these computational tools drive business success across various domains of Amazon.
 
