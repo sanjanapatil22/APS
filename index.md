@@ -21,7 +21,7 @@ author: Sanjana Patil
 ---
 
 ## Introduction
-
+![Amazon Logo](assets/amazon_logo.png)
 In the digital era, Amazon has become synonymous with e-commerce, cloud computing, and intelligent logistics. What began as an online bookstore is now a global tech behemoth, consistently shaping the way consumers interact with technology, retail, and digital services. Today, Amazon operates one of the most **intelligent and optimized ecosystems** in the world.
 
 - 📈 Amazon is valued at over **$2.166 trillion**, making it one of the top 5 most valuable companies globally.
