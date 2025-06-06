@@ -10,9 +10,6 @@ author: Sanjana Patil
 **University:** KLE Technological University, Hubballi-31  
 **Portfolio Domain:** Amazon  
 
----
-
-# Powering the World’s Largest Marketplace — A Dive into Amazon’s Ecosystem through Algorithms
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -20,7 +17,7 @@ author: Sanjana Patil
 
 ---
 
-## Introduction
+# Introduction
 ![Amazon Logo](assets/amazon_logo.jpg)
 In the digital era, Amazon has become synonymous with e-commerce, cloud computing, and intelligent logistics. What began as an online bookstore is now a global tech behemoth, consistently shaping the way consumers interact with technology, retail, and digital services. Today, Amazon operates one of the most **intelligent and optimized ecosystems** in the world.
 
@@ -34,7 +31,6 @@ In the digital era, Amazon has become synonymous with e-commerce, cloud computin
 
 From product searches to last-mile delivery, Amazon relies on **data structures and algorithms (DSA)** to manage and optimize its massive operations. This portfolio explores how these computational tools drive business success across various domains of Amazon.
 
----
 
 ## Amazon’s Core Services and Domains
 
