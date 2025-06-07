@@ -81,7 +81,7 @@ From product searches to last-mile delivery, Amazon relies on **data structures 
 ---
 # Business Use Cases
 
-## Product Recommendation System
+## 1. Product Recommendation System
 To achieve highly relevant and diverse product recommendations, we can integrate two powerful approaches:
 
 - Collaborative Filtering (CF) via Matrix Factorization, which captures user-item interaction patterns, and
