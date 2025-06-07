@@ -123,4 +123,14 @@ Time complexity per insert: O(logN)
 CERT involves constructing a 2D grid of products, where each cell corresponds to a product ID, and semantically similar products are placed in proximity based on:
 - BERT embeddings of product descriptions
 - Ratings, reviews, or category information
+#### **Beam Search**
+**Beam Search** is a heuristic search algorithm that explores the best few paths at each step instead of all possible ones. It keeps only the top *k* (beam width) most promising candidates based on a scoring function (e.g., similarity + popularity). At each level, it expands those candidates to their neighbors, evaluates them, and again keeps only the top *k*. This continues until a goal is reached or a depth limit is hit. It’s faster than exhaustive search and works well for recommendation tasks where we want good-enough results quickly.
 
+**Time Complexity**
+- **O(w⋅b⋅d)**
+- b = branching factor (number of neighbors per node, typically ≤ 4 in a 2D grid)
+- w = beam width (number of paths retained at each depth)
+- d = maximum depth (number of search steps or levels)
+
+### Combining Collaborative Filtering and CERT
+Once ew have both the lists, we can combine the lists, or pick alternatively in **Round Robin** fashion.
