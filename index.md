@@ -73,4 +73,10 @@ From product searches to last-mile delivery, Amazon relies on **data structures 
 
 ---
 
-> 🚀 *Next up: [Objectives](#objectives)* – what this portfolio aims to achieve, and how algorithmic thinking underpins Amazon’s world-class performance.
+#Objectives
+-	Understand and break down Amazon’s key business domains to identify underlying algorithmic and structural components.
+-	Apply algorithmic design and data structures to model and propose improvements for system performance, scalability, and efficiency.
+-	Demonstrate real-world relevance of academic concepts by mapping them to challenges and innovations within Amazon’s technological ecosystem.
+
+---
+
