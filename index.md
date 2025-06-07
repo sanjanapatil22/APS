@@ -73,10 +73,38 @@ From product searches to last-mile delivery, Amazon relies on **data structures 
 
 ---
 
-#Objectives
+# Objectives
 -	Understand and break down Amazon’s key business domains to identify underlying algorithmic and structural components.
 -	Apply algorithmic design and data structures to model and propose improvements for system performance, scalability, and efficiency.
 -	Demonstrate real-world relevance of academic concepts by mapping them to challenges and innovations within Amazon’s technological ecosystem.
 
 ---
+# Business Use Cases
 
+### Product Recommendation System
+To achieve highly relevant and diverse product recommendations, we can integrate two powerful approaches:
+
+- Collaborative Filtering (CF) via Matrix Factorization, which captures user-item interaction patterns, and
+- CERT (Content Enhanced Recommendation Traversal), which leverages a semantic grid of products based on product content and relationships.
+
+#### Collaborative Filtering
+Collaborative filtering aims to predict user preferences by factoring the sparse user-item rating matrix into two low-rank matrices, U and V:
+- R: user-item rating matrix (sparse matrix)
+- U: User latent feature matrix
+- V: Item latent feature matrix
+- R': Predicted full matrix with all user-item scores
+
+Efficient Sparse Matrix Representation with DoK
+Since the original matrix R is very sparse, we can use the Dictionary of Keys (DoK) format:
+A dictionary that stores only non-zero ratings:
+{(user_id, item_id): rating}
+
+Benefits during training:
+- Only observed entries are iterated over
+- Avoids allocating memory for missing ratings
+- Fast lookup and dynamic updates
+
+Benefits during inference:
+For a given user i, you compute the dot product of their user feature vector with all product feature vectors. This yields predicted ratings for every product.
+You rank products by predicted rating and recommend the top ones the user hasn’t rated yet.
+As the dataset is huge, computed R' is huge, so it is computed on the fly, during inference.
