@@ -121,7 +121,7 @@ As the dataset is huge, computed **R' is huge**, so it is computed on the fly, d
 To store the Top-N predicted products per user, we use:
 **Min-Heap** (Priority Queue) of size N per user
 Efficiently tracks and maintains highest predicted ratings
-![min Heap](assets/images/min_heap.png)
+![min Heap](assets/images/minheap.png)
 Time complexity per insert: O(logN)
 
 ### CERT: Grid-based Semantic Product Traversal
