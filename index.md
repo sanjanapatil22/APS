@@ -95,9 +95,11 @@ Collaborative filtering aims to predict user preferences by factoring the sparse
 - R': Predicted full matrix with all user-item scores
 
 #### Efficient Sparse Matrix Representation with DoK
-Since the original matrix R is very sparse, we can use the Dictionary of Keys (DoK) format:
-A dictionary that stores only non-zero ratings:
-{(user_id, item_id): rating}
+Since the original matrix R is very sparse, we can use the **Dictionary of Keys (DoK) format**:
+
+A dictionary that stores only **non-zero ratings**:
+
+**{(user_id, item_id): rating}**
 
 Benefits during training:
 - Only observed entries are iterated over
@@ -105,9 +107,10 @@ Benefits during training:
 - Fast lookup and dynamic updates
 
 Benefits during inference:
-For a given user i, you compute the dot product of their user feature vector with all product feature vectors. This yields predicted ratings for every product.
+For a given user i, you compute the dot product of their **user feature vector** with all **product feature vectors**. This yields predicted ratings for every product.
 You rank products by predicted rating and recommend the top ones the user hasn’t rated yet.
-As the dataset is huge, computed R' is huge, so it is computed on the fly, during inference.
+
+As the dataset is huge, computed **R' is huge**, so it is computed on the fly, during inference. Hence DoK is beneficial. 
 
 #### Storing Top-N Recommendations from CF
 To store the Top-N predicted products per user, we use:
@@ -115,3 +118,9 @@ Min-Heap (Priority Queue) of size N per user
 Efficiently tracks and maintains highest predicted ratings
 
 Time complexity per insert: O(logN)
+
+### CERT: Grid-based Semantic Product Traversal
+CERT involves constructing a 2D grid of products, where each cell corresponds to a product ID, and semantically similar products are placed in proximity based on:
+- BERT embeddings of product descriptions
+- Ratings, reviews, or category information
+
