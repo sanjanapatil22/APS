@@ -221,13 +221,11 @@ Combining Bitmaps and Inverted Indexes is a powerful approach for building high-
 - Inverted Index: Maps attribute values to lists of product IDs.
 - Bitmap / Bitset: A binary array where each bit represents whether a product has or does not have a certain attribute.
 
-<div style="text-align: center;">
-<img src="assets/images/search-filter1.png" alt="min Heap" width="400" height="300"/>
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="assets/images/search-filter1.png" alt="search filter 1" width="400" height="300"/>
+  <img src="assets/images/search-filter2.png" alt="search filter 2" width="400" height="300"/>
 </div>
 
-<div style="text-align: center;">
-<img src="assets/images/search-filter2.png" alt="min Heap" width="400" height="300"/>
-</div>
 
 
 Say a user wants:
