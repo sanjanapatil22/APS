@@ -119,7 +119,7 @@ A Trie is a tree-like data structure where each node represents a character. Eac
 ## 2. Autocorrect/ typo-tolerant search
 
 <div style="text-align: center;">
-  <img src="assets/images/bk-tree.png" alt="collaborative filtering" width="400" height="150"/>
+  <img src="assets/images/bk-tree.png" alt="autocorrect"/>
 </div>
 
 A BK-Tree is a tree structure designed for fast similarity searches based on edit distance (Levenshtein Distance, Hamming, etc.).
