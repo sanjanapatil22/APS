@@ -119,9 +119,9 @@ As the dataset is huge, computed **R' is huge**, so it is computed on the fly, d
 
 #### Storing Top-N Recommendations from CF
 To store the Top-N predicted products per user, we use:
-**Min-Heap** (Priority Queue) of size N per user
+**Max-Heap** (Priority Queue) of size N per user
 Efficiently tracks and maintains highest predicted ratings
-![min Heap](assets/images/minheap.png)
+![min Heap](assets/images/maxheap.png)
 
 Time complexity per insert: O(logN)
 
