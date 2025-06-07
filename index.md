@@ -213,7 +213,9 @@ Once we have both the lists, we can combine the lists, or pick alternatively in 
 * 🔍 **More Diverse Recs**: Avoids filter bubbles, improves discovery.
 * ⚡ **Real-Time Relevance**: Adapts to both long-term and session-based context.
 * 💰 **Boosts Sales**: Higher CTR, AOV, and user retention.
+  
 ---
+
 ## 4. Search with filters
 
 Combining Bitmaps and Inverted Indexes is a powerful approach for building high-performance filtering systems
@@ -231,9 +233,12 @@ Combining Bitmaps and Inverted Indexes is a powerful approach for building high-
 Say a user wants:
 Brand = Samsung AND RAM = 6GB
 
-> Samsung Bitmap:  1 0 1 0 0 0 1 0
-> 6GB Bitmap:      1 0 1 1 0 0 0 0
-> -------------------------------
-> AND Result:      1 0 1 0 0 0 0 0 → Product IDs: 0, 2
+<pre><code>
+Samsung Bitmap:  1 0 1 0 0 0 1 0
+6GB Bitmap:      1 0 1 1 0 0 0 0
+-------------------------------
+AND Result:      1 0 1 0 0 0 0 0 → Product IDs: 0, 2
+</code></pre>
+
 
 
