@@ -121,6 +121,8 @@ As the dataset is huge, computed **R' is huge**, so it is computed on the fly, d
 To store the Top-N predicted products per user, we use:
 **Max-Heap** (Priority Queue) of size N per user
 Efficiently tracks and maintains highest predicted ratings
+
+
 <img src="assets/images/maxheap.png" alt="min Heap" width="400" height="300"/>
 
 Time complexity per insert: O(logN)
