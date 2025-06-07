@@ -145,3 +145,11 @@ CERT involves constructing a 2D grid of products, where each cell corresponds to
 
 ### Combining Collaborative Filtering and CERT
 Once ew have both the lists, we can combine the lists, or pick alternatively in **Round Robin** fashion.
+
+#### **Business Advantages**
+* 🎯 **Better Personalization**: Combines user behavior (CF) with product meaning (CERT).
+* ❄️ **Solves Cold Start**: CERT handles new users/products via embeddings.
+* 🔍 **More Diverse Recs**: Avoids filter bubbles, improves discovery.
+* ⚡ **Real-Time Relevance**: Adapts to both long-term and session-based context.
+* 💰 **Boosts Sales**: Higher CTR, AOV, and user retention.
+
