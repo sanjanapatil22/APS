@@ -105,18 +105,33 @@ When users search for products, some queries are repeated very often (e.g., “i
 </div>
 A Trie is a tree-like data structure where each node represents a character. Each node stores, A character, A frequency counter (how often this prefix is used).
 
-- The most frequent Trie node can maintain a Min Heap of top-N suggestions (e.g., top 5).
+- The most frequent Trie node can maintain a Min Heap of top-N suggestions (e.g., top 5). This allows for real-time retrieval of the best suggestions.
 - Heap stores tuples like: (frequency, suggestion), so frequently searched terms float to the top.
 
 
 **Time Complexity:**
-	- O(P + K log K)
-	- P: Length of the prefix typed
-	- K: Number of suggestions returned
-	- Traverse the prefix in Trie (O(P)), then extract top K suggestions (O(K log K) if heapified)
+- O(P + K log K)
+- P: Length of the prefix typed
+- K: Number of suggestions returned
+- Traverse the prefix in Trie (O(P)), then extract top K suggestions (O(K log K) if heapified)
 
 ---
-## 2. Product Recommendation System
+## 2. Autocorrect/ typo-tolerant search
+
+<div style="text-align: center;">
+  <img src="assets/images/bk-tree.png" alt="collaborative filtering" width="400" height="150"/>
+</div>
+
+A BK-Tree is a tree structure designed for fast similarity searches based on edit distance (Levenshtein Distance, Hamming, etc.).
+
+**Time Complexity**
+- Insert: O(log n)
+- Search: O(k log n) where k is small and depends on tolerance (edit threshold)
+- Much faster than checking all words with brute force.
+
+
+---
+## 3. Product Recommendation System
 To achieve highly relevant and diverse product recommendations, we can integrate two powerful approaches:
 
 - Collaborative Filtering (CF) via Matrix Factorization, which captures user-item interaction patterns, and
