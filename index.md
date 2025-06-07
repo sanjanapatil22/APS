@@ -102,7 +102,7 @@ Since the original matrix R is very sparse, we can use the **Dictionary of Keys 
 
 A dictionary that stores only **non-zero ratings**:
 
-**{(user_id, item_id): rating}**
+> **{(user_id, item_id): rating}**
 
 If 1 million users rate only 0.1% of 100,000 items:
 - Dense Matrix: stores 100 billion entries
