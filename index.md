@@ -88,7 +88,7 @@ When users start typing in the Amazon search bar, the platform shows dynamic sea
 - Personalized (based on the user’s history, region, and preferences)
 
 <div style="text-align: center;">
-  <img src="assets/images/at.png" alt="autocomplete" width="400" height="300"/>
+  <img src="assets/images/at.png" alt="autocomplete" />
 </div>
 
 
@@ -101,7 +101,7 @@ When users search for products, some queries are repeated very often (e.g., “i
 
 ### Trie (Prefix Tree) and Heap
 <div style="text-align: center;">
-  <img src="assets/images/trie_heap.png" alt="autocomplete" width="400" height="300"/>
+  <img src="assets/images/trie_heap.png" alt="autocomplete"/>
 </div>
 A Trie is a tree-like data structure where each node represents a character. Each node stores, A character, A frequency counter (how often this prefix is used).
 
@@ -125,7 +125,7 @@ To achieve highly relevant and diverse product recommendations, we can integrate
 ### Collaborative Filtering
 
 <div style="text-align: center;">
-  <img src="assets/images/cf.png" alt="collaborative filtering" width="400" height="300"/>
+  <img src="assets/images/cf.png" alt="collaborative filtering" width="400" height="150"/>
 </div>
 
 Collaborative filtering aims to predict user preferences by factoring the sparse user-item rating matrix into two low-rank matrices, U and V:
