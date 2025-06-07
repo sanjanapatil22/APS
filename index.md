@@ -216,4 +216,26 @@ Once we have both the lists, we can combine the lists, or pick alternatively in 
 ---
 ## 4. Search with filters
 
+Combining Bitmaps and Inverted Indexes is a powerful approach for building high-performance filtering systems
+
+- Inverted Index: Maps attribute values to lists of product IDs.
+- Bitmap / Bitset: A binary array where each bit represents whether a product has or does not have a certain attribute.
+
+<div style="text-align: center;">
+<img src="assets/images/search-filter1.png" alt="min Heap" width="400" height="300"/>
+</div>
+
+<div style="text-align: center;">
+<img src="assets/images/search-filter2.png" alt="min Heap" width="400" height="300"/>
+</div>
+
+
+Say a user wants:
+Brand = Samsung AND RAM = 6GB
+
+> Samsung Bitmap:  1 0 1 0 0 0 1 0
+> 6GB Bitmap:      1 0 1 1 0 0 0 0
+> -------------------------------
+> AND Result:      1 0 1 0 0 0 0 0 → Product IDs: 0, 2
+
 
