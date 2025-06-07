@@ -88,6 +88,7 @@ To achieve highly relevant and diverse product recommendations, we can integrate
 - CERT (Content Enhanced Recommendation Traversal), which leverages a semantic grid of products based on product content and relationships.
 
 ### Collaborative Filtering
+![collaborative filtering](assets/images/cf.png)
 Collaborative filtering aims to predict user preferences by factoring the sparse user-item rating matrix into two low-rank matrices, U and V:
 - R: user-item rating matrix (sparse matrix)
 - U: User latent feature matrix
@@ -118,9 +119,9 @@ As the dataset is huge, computed **R' is huge**, so it is computed on the fly, d
 
 #### Storing Top-N Recommendations from CF
 To store the Top-N predicted products per user, we use:
-Min-Heap (Priority Queue) of size N per user
+**Min-Heap** (Priority Queue) of size N per user
 Efficiently tracks and maintains highest predicted ratings
-
+![min Heap](assets/images/min_heap.png)
 Time complexity per insert: O(logN)
 
 ### CERT: Grid-based Semantic Product Traversal
