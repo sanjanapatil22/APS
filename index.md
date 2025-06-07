@@ -213,4 +213,7 @@ Once we have both the lists, we can combine the lists, or pick alternatively in 
 * 🔍 **More Diverse Recs**: Avoids filter bubbles, improves discovery.
 * ⚡ **Real-Time Relevance**: Adapts to both long-term and session-based context.
 * 💰 **Boosts Sales**: Higher CTR, AOV, and user retention.
+---
+## 4. Search with filters
+
 
