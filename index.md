@@ -134,7 +134,7 @@ CERT involves constructing a 2D grid of products, where each cell corresponds to
 
 #### **Beam Search**
 **Beam Search** is a heuristic search algorithm that explores the best few paths at each step instead of all possible ones. It keeps only the top *k* (beam width) most promising candidates based on a scoring function (e.g., similarity + popularity). At each level, it expands those candidates to their neighbors, evaluates them, and again keeps only the top *k*. This continues until a goal is reached or a depth limit is hit. It’s faster than exhaustive search and works well for recommendation tasks where we want good-enough results quickly.
-
+<img src="assets/images/bs.png" alt="min Heap" width="400" height="300"/>
 **Time Complexity**
 - **O(w⋅b⋅d)**
 - b = branching factor (number of neighbors per node, typically ≤ 4 in a 2D grid)
