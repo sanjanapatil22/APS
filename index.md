@@ -241,4 +241,45 @@ AND Result:      1 0 1 0 0 0 0 0 → Product IDs: 0, 2
 </code></pre>
 
 
+---
+
+## 5. Category-wise navigation
+
+Categories and subcategories form a hierarchical tree or a DAG if some items belong to multiple categories.
+- Each node is a category, and edges connect parent → child.
+
+<div style="text-align: center;">
+<img src="assets/images/dag.png" alt="min Heap" />
+</div>
+
+
+-	✅ Hierarchical display: Easy to create menus, breadcrumbs, and filters.
+-	✅ Efficient traversal: You can easily traverse and find all subcategories.
+-	✅ URL mapping: Maps cleanly to RESTful URLs like /electronics/mobiles/smartphones
+-	✅ Flexible filtering: DAGs allow a product to belong to multiple categories without duplication.
+
+DFS (Depth-First Search):
+-	Used to traverse the category tree to load subcategories in-depth (e.g., preloading an entire branch).-
+-	Helpful for lazy loading or recursive rendering.
+
+🔁 Time Complexity:
+	•	O(N + E) in DAGs
+	•	In a Tree, since E = N - 1, this simplifies to O(N)
+(We visit each node and edge once.)
+
+🧠 Space Complexity:
+	•	O(h) for recursive DFS (call stack space).
+	•	Worst case: height h = N (skewed tree)
+	•	O(N) for explicit stack or visited set in DAGs (to avoid cycles/repetition)
+ 
+BFS (Breadth-First Search):
+-	Useful for level-by-level traversal, e.g., rendering main categories first.
+-	Helps with UI optimization when menus are loaded incrementally.
+
+🔁 Time Complexity:
+	•	O(N + E) – All nodes and edges are visited.
+
+🧠 Space Complexity:
+	•	O(w) where w = maximum number of nodes at any level (i.e., tree width).
+	•	In worst case (flat structure): O(N)
 
