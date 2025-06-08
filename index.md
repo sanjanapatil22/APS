@@ -318,3 +318,29 @@ B or B+ trees can be used
 - Insert: O(log n)	
 - Delete: O(log n)
 
+---
+## 8. Time slot management in scheduled deliveries
+
+Amazon offers scheduled delivery where customers choose specific delivery time slots (e.g., 10 AM–12 PM). With thousands of users in each city, efficiently managing overlapping requests becomes a challenge:
+
+- Preventing overbooking of a delivery slot.
+- Quickly identifying available slots during peak demand.
+- Updating and querying slot availability in real-time.
+
+A **Segment Tree** can efficiently support:
+
+<div style="text-align: center;">
+<img src="assets/images/seg-tree.png" alt="min Heap" />
+</div>
+
+
+- Range Updates: Mark multiple time slots as booked.
+- Range Queries: Check if a set of slots are available.
+- Point Updates: Cancel or reassign a single slot.
+
+**Time Complexity**
+
+- Book: O(log n)
+- Cancel: O(log n)
+- sAvailable: O(log n)
+
