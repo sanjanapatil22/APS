@@ -396,3 +396,30 @@ Naive/modulo-based hashing breaks under node addition/removal:
 
 ---
 
+## 11. 8. Geofencing-based Offers
+
+Send app notifications when a user walks into a mall that sells a wishlisted product.
+
+#### KD-Trees for 2D spatial search
+Given a user’s (latitude, longitude) location, you can perform nearest-neighbor or range queries to find the geofences the user is within.
+
+<div style="text-align: center;">
+<img src="assets/images/kd-trees.png" alt="kd trees" />
+</div>
+
+
+**Time n Space Complexity**
+- KD-Tree Construction: O(N log N)	O(N)
+- KD-Tree Query (range/NN): O(log N + K)	—
+
+N = Number of geofences, K = Number of matched zones, W = Wishlist size
+
+#### Hash Sets to lookup geofence zones a user enters in constant time
+
+Store user wishlists or interest tags in a hash set.
+- Store geofenced areas and their mapped product categories (e.g., mall A → electronics).
+- When user enters a geofenced region, check if any intersection exists between:
+- userWishList ∩ geoZoneProducts
+
+**Time n Space Complexity**
+- HashSet lookup: O(1) per item		O(W) for user wishlist
