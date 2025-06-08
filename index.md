@@ -166,8 +166,8 @@ To achieve highly relevant and diverse product recommendations, we can integrate
 
 <div style="text-align: center;">
   <img src="assets/images/cf.png" alt="collaborative filtering" width="400" height="150"/>
+  <div style="margin-top: 5px; font-style: italic;">Collaborative Filtering [2]</div>
 </div>
-*Collaborative Filtering [2]*
 
 Collaborative filtering aims to predict user preferences by factoring the sparse user-item rating matrix into two low-rank matrices, U and V:
 - R: user-item rating matrix (sparse matrix)
@@ -208,6 +208,7 @@ Efficiently tracks and maintains highest predicted ratings
 
 <div style="text-align: center;">
   <img src="assets/images/maxheap.png" alt="min Heap" width="400" height="300"/>
+   <div style="margin-top: 5px; font-style: italic;">Max Heap [3]</div>
 </div>
 
 Time complexity per insert: O(logN)
@@ -224,7 +225,8 @@ It involves constructing a 2D grid of products, where each cell corresponds to a
 **Beam Search** is a heuristic search algorithm that explores the best few paths at each step instead of all possible ones. It keeps only the top *k* (beam width) most promising candidates based on a scoring function (e.g., similarity + popularity). At each level, it expands those candidates to their neighbors, evaluates them, and again keeps only the top *k*. This continues until a goal is reached or a depth limit is hit. It’s faster than exhaustive search and works well for recommendation tasks where we want good-enough results quickly.
 
 <div style="text-align: center;">
-<img src="assets/images/bs.png" alt="min Heap" width="400" height="300"/>
+  <img src="assets/images/Beam_search.gif" alt="Beam search" width="400" height="300"/>
+  <div style="margin-top: 5px; font-style: italic;">Beam Search [4]</div>
 </div>
 
 **Time Complexity**
@@ -560,5 +562,9 @@ In this portfolio, I’ve explored how the concepts I learned in Data Structures
 # References
 
 [1] [Amazon Facts & Statistics – Investing.com, (May 22, 2025)](https://www.investing.com/academy/statistics/amazon-facts/)
-[2] [How Does the Amazon Recommendation System Work?, (March 18, 2024)](https://www.baeldung.com/cs/amazon-recommendation-system)
-[3]
+
+[2] [How Does the Amazon Recommendation System Work? - baeldung.com, (March 18, 2024)](https://www.baeldung.com/cs/amazon-recommendation-system)
+
+[3] [Introduction to max heaps - GeeksforGeeks, (May 15, 2025)](https://www.geeksforgeeks.org/introduction-to-max-heap-data-structure/)
+
+[4] [Beam search - Wikipedia](https://en.wikipedia.org/wiki/Beam_search)
