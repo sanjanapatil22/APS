@@ -110,10 +110,23 @@ A Trie is a tree-like data structure where each node represents a character. Eac
 
 
 **Time Complexity:**
-- O(P + K log K)
-- P: Length of the prefix typed
-- K: Number of suggestions returned
-- Traverse the prefix in Trie (O(P)), then extract top K suggestions (O(K log K) if heapified)
+- Insert a query into Trie: `O(P)`
+  - `P` = length of the query (inserting character by character)
+- Search suggestions for prefix: O(P + K log K)
+  - O(P) to traverse down the Trie for the prefix
+  - O(K log K) to retrieve top-K suggestions using a min-heap
+- LRU Cache access/update: O(1) (average, using a hash map + doubly linked list)
+
+**Business Advantages**
+- ⚡ Ultra-Fast Experience: Real-time suggestions under 100ms keep users engaged, reducing bounce rates.
+- 🧠 Personalized Search: Region and user-history-based completions increase relevance, leading to higher conversion.
+- 💰 Boosts Sales: Smart suggestions drive product discovery, upselling, and impulse purchases.
+- 📈 Scalability: Trie with LRU caching efficiently handles millions of queries with minimal latency.
+- 🎯 Precision: Frequent and trending queries bubble to the top, reflecting current market demand and improving user trust.
+- 📉 Lower Backend Load: Caching avoids redundant computation, reducing infrastructure cost and latency.
+
+View Trie implementation: [Trie Implementation Folder](assets/tries.cpp)
+
 
 ---
 ## 2. Autocorrect/ typo-tolerant search
@@ -396,7 +409,7 @@ Naive/modulo-based hashing breaks under node addition/removal:
 
 ---
 
-## 11. 8. Geofencing-based Offers
+## 11. Geofencing-based Offers
 
 Send app notifications when a user walks into a mall that sells a wishlisted product.
 
