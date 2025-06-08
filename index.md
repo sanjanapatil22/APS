@@ -167,6 +167,7 @@ To achieve highly relevant and diverse product recommendations, we can integrate
 <div style="text-align: center;">
   <img src="assets/images/cf.png" alt="collaborative filtering" width="400" height="150"/>
 </div>
+*Collaborative Filtering [2]*
 
 Collaborative filtering aims to predict user preferences by factoring the sparse user-item rating matrix into two low-rank matrices, U and V:
 - R: user-item rating matrix (sparse matrix)
@@ -558,4 +559,6 @@ In this portfolio, I’ve explored how the concepts I learned in Data Structures
 
 # References
 
-[1] [Amazon Facts & Statistics – Investing.com](https://www.investing.com/academy/statistics/amazon-facts/)
+[1] [Amazon Facts & Statistics – Investing.com, (May 22, 2025)](https://www.investing.com/academy/statistics/amazon-facts/)
+[2] [How Does the Amazon Recommendation System Work?, (March 18, 2024)](https://www.baeldung.com/cs/amazon-recommendation-system)
+[3]
