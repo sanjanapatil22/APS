@@ -344,3 +344,25 @@ A **Segment Tree** can efficiently support:
 - Cancel: O(log n)
 - sAvailable: O(log n)
 
+---
+
+## 9. GDPR & Privacy Compliance
+
+To ensure compliance with privacy regulations like GDPR, large-scale platforms like Amazon must track, log, and audit data access, user consent, and modifications. These logs must be:
+- Tamper-proof
+- Efficiently verifiable
+- Cryptographically secure
+- Scalable to billions of records
+
+This is where Merkle Trees and append-only logs can be used.
+
+<div style="text-align: center;">
+<img src="assets/images/m-tree.png" alt="min Heap" />
+</div>
+
+**Time Complexity**
+- Build Tree: O(n)
+- Verify Inclusion: O(log n)
+- Add Entry (Append-only): O(log n) (rebuilding partial tree paths)
+- Verify Root Integrity: O(1) (comparing root hash)
+
