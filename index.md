@@ -309,5 +309,12 @@ In amazons ecosystem,
 Batabases use balanced tree structures to index purchase data, enabling fast queries by user ID or date range.
 B or B+ trees can be used
 
+<div style="text-align: center;">
+<img src="assets/images/b-tree.png" alt="min Heap" />
+</div>
 
+**Time Complexity**
+- Search: O(log n)
+- Insert: O(log n)	
+- Delete: O(log n)
 
