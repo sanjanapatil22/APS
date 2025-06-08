@@ -14,6 +14,7 @@ author: Sanjana Patil
 ## Table of Contents
 - [Introduction](#introduction)
 - [Objectives](#objectives)
+- [Business Use Cases](#business-use-cases)
 
 ---
 
