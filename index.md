@@ -404,7 +404,7 @@ Send app notifications when a user walks into a mall that sells a wishlisted pro
 Given a user’s (latitude, longitude) location, you can perform nearest-neighbor or range queries to find the geofences the user is within.
 
 <div style="text-align: center;">
-<img src="assets/images/kd-trees.png" alt="kd trees" />
+<img src="assets/images/kd-trees.webp" alt="kd trees" />
 </div>
 
 
