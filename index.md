@@ -282,4 +282,32 @@ BFS (Breadth-First Search):
 🧠 Space Complexity:
 	•	O(w) where w = maximum number of nodes at any level (i.e., tree width).
 	•	In worst case (flat structure): O(N)
+---
+
+## 6. Optimising Delivery logistics
+
+Efficiently assigning packages to delivery vehicles is crucial to reduce fuel costs, improve delivery time, and fully utilize capacity. This cna be solved using optimization problems — Bin Packing and VRP.
+
+Bin Packing solves: What goes in which truck?
+
+VRP solves: What is the best delivery sequence for each truck?
+
+In amazons ecosystem,
+- Phase 1: Cluster deliveries by region → Bin Packing assigns packages to trucks.
+- Phase 2: Within each truck → VRP algorithm decides the optimal delivery path.
+
+**Business Advantages**
+- Reduced fuel and labor cost
+- Faster deliveries and higher customer satisfaction
+- Balanced load distribution across delivery fleet
+- Adaptable to dynamic changes (new orders, canceled deliveries)
+
+---
+
+## 7. Account Managaement and Purchase History
+
+Batabases use balanced tree structures to index purchase data, enabling fast queries by user ID or date range.
+B or B+ trees can be used
+
+
 
