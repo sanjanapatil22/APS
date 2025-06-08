@@ -136,6 +136,7 @@ A Trie is a tree-like data structure where each node represents a character. Eac
 
 <div style="text-align: center;">
   <img src="assets/images/bk-tree.png" alt="autocorrect"/>
+   <div style="margin-top: 5px; font-style: italic;">BK-Tree[5]</div>
 </div>
 
 A BK-Tree is a tree structure designed for fast similarity searches based on edit distance (Levenshtein Distance, Hamming, etc.).
@@ -304,6 +305,7 @@ Categories and subcategories form a hierarchical tree or a DAG if some items bel
 
 <div style="text-align: center;">
 <img src="assets/images/dag.png" alt="min Heap" />
+  <div style="margin-top: 5px; font-style: italic;">Directed Acyclic Graphs [6]</div>
 </div>
 
 
@@ -353,7 +355,7 @@ BFS (Breadth-First Search):
 
 ## 6. Optimising Delivery logistics
 
-Efficiently assigning packages to delivery vehicles is crucial to reduce fuel costs, improve delivery time, and fully utilize capacity. This cna be solved using optimization problems — Bin Packing and VRP.
+Efficiently assigning packages to delivery vehicles is crucial to reduce fuel costs, improve delivery time, and fully utilize capacity. This cna be solved using optimization problems — **Bin Packing**[7] and **VRP**[8].
 
 Bin Packing solves: What goes in which truck?
 
@@ -384,7 +386,8 @@ Batabases use balanced tree structures to index purchase data, enabling fast que
 B or B+ trees can be used
 
 <div style="text-align: center;">
-<img src="assets/images/b-tree.png" alt="min Heap" />
+<img src="assets/images/b-tree.png" alt="b+ tree" />
+  <div style="margin-top: 5px; font-style: italic;">B+ tree [9]</div>
 </div>
 
 **Time Complexity**
@@ -450,6 +453,7 @@ This is where **Merkle Trees** and append-only logs can be used.
 
 <div style="text-align: center;">
 <img src="assets/images/m-tree.png" alt="min Heap" />
+  <div style="margin-top: 5px; font-style: italic;">Merkle Tree[11]</div>
 </div>
 
 **Time Complexity**
@@ -475,6 +479,7 @@ Naive/modulo-based hashing breaks under node addition/removal:
 
 <div style="text-align: center;">
 <img src="assets/images/cdn.png" alt="min Heap" />
+  <div style="margin-top: 5px; font-style: italic;">Consistent Hashing with virtual nodes[12]</div>
 </div>
 
 ### ⏱️ Time and Space Complexity: Consistent Hashing + Virtual Nodes
@@ -521,6 +526,7 @@ Given a user’s (latitude, longitude) location, you can perform nearest-neighbo
 
 <div style="text-align: center;">
 <img src="assets/images/kd-trees.webp" alt="kd trees" />
+   <div style="margin-top: 5px; font-style: italic;">KD-Tree[13]</div>
 </div>
 
 
@@ -568,3 +574,21 @@ In this portfolio, I’ve explored how the concepts I learned in Data Structures
 [3] [Introduction to max heaps - GeeksforGeeks, (May 15, 2025)](https://www.geeksforgeeks.org/introduction-to-max-heap-data-structure/)
 
 [4] [Beam search - Wikipedia](https://en.wikipedia.org/wiki/Beam_search)
+
+[5] [BK-tree|Introduction and implementation- GeeksforGeeks, (Dec 23, 2023)](https://www.geeksforgeeks.org/bk-tree-introduction-implementation/)
+
+[6] [What is DAG? - Horizen academy](https://www.horizen.io/academy/directed-acyclic-graph-dag/)
+
+[7] [The Bin packing problem - Google OR tools, (Aug 28, 2024)](https://developers.google.com/optimization/pack/bin_packing)
+
+[8] [Vehicle Routing Problem - Science Direct](https://www.sciencedirect.com/topics/social-sciences/vehicle-routing-problem)
+
+[9] [B+ trees overview - TutorialsPoint](https://www.tutorialspoint.com/data_structures_algorithms/b_plus_trees.htm)
+
+[10] [Segment Tree - GeeksforGeeks](https://www.geeksforgeeks.org/segment-tree-data-structure/)
+
+[11] Gracy, M. & Jeyavadhanam, B.. (2022). MTTBA- A Key Contributor for Sustainable Energy Consumption Time and Space Utility for Highly Secured Crypto Transactions in Blockchain Technology. 10.48550/arXiv.2209.13431. 
+
+[12] [Consistent Hashing - Medium, (Jan 2, 2023)](https://vishalrana9915.medium.com/consistent-hashing-36fa25892b4f)
+
+[13] [Introduction to KD-trees - baeldung.com](https://www.baeldung.com/cs/k-d-trees)
