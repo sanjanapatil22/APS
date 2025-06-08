@@ -366,3 +366,33 @@ This is where Merkle Trees and append-only logs can be used.
 - Add Entry (Append-only): O(log n) (rebuilding partial tree paths)
 - Verify Root Integrity: O(1) (comparing root hash)
 
+**Business advantages**
+- mmutable audit trails
+- Cryptographic verification of data integrity
+- Trustworthy user data tracking and access history
+
+--- 
+## 10. Optimizing Content Delivery with Consistent Hashing + Virtual Nodes
+
+Naive/modulo-based hashing breaks under node addition/removal:
+- Causes massive reallocation of keys.
+- Doesn’t support uneven server capacities.
+- Leads to hotspots or imbalanced load.
+
+<div style="text-align: center;">
+<img src="assets/images/cdn.png" alt="min Heap" />
+</div>
+
+
+
+**Business advantages**
+- Balanced load prevents server overload and cuts costs
+- Seamless scaling with minimal downtime
+- Efficient hardware use via weighted distribution
+- Easy, non-disruptive infrastructure changes
+- Reliable failover and fault testing
+- Faster global content delivery
+- Reduced operational and cloud expenses
+
+---
+
