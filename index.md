@@ -125,7 +125,7 @@ A Trie is a tree-like data structure where each node represents a character. Eac
 - 🎯 Precision: Frequent and trending queries bubble to the top, reflecting current market demand and improving user trust.
 - 📉 Lower Backend Load: Caching avoids redundant computation, reducing infrastructure cost and latency.
 
-View Trie implementation: [Trie Implementation Folder](assets/tries.cpp)
+[View Trie implementation](assets/tries.cpp)
 
 
 ---
@@ -142,6 +142,15 @@ A BK-Tree is a tree structure designed for fast similarity searches based on edi
 - Search: O(k log n) where k is small and depends on tolerance (edit threshold)
 - Much faster than checking all words with brute force.
 
+**Business Advantages**
+- 🛍️ Improved User Experience: Users get accurate results even with misspellings (e.g., “iphne” → “iPhone”), reducing friction.
+- 📈 Higher Conversion Rates: Correcting typos increases the chances that users find the right product and make a purchase.
+- ⚡ Faster Recovery from Input Errors: Real-time typo correction avoids "zero results" scenarios that can lead to user drop-off.
+- 🌍 Multilingual & Fuzzy Search Support: Works across languages and tolerates keyboard layout errors, enhancing global accessibility.
+- 💡 Reduced Bounce Rate: Users stay engaged longer by quickly finding what they meant to search for.
+- 📊 Data Insights: Captures frequent typos and misspellings, helping improve search indexing and campaign targeting.
+
+[View BK-trees implementation](assets/BK-tree.cpp)
 
 ---
 ## 3. Product Recommendation System
@@ -199,6 +208,9 @@ Efficiently tracks and maintains highest predicted ratings
 
 Time complexity per insert: O(logN)
 
+[View max-heap implementation](assets/max_heap.cpp)
+
+
 ### Grid-based Semantic Product Traversal
 It involves constructing a 2D grid of products, where each cell corresponds to a product ID, and semantically similar products are placed in proximity based on:
 - BERT embeddings of product descriptions
@@ -226,7 +238,9 @@ Once we have both the lists, we can combine the lists, or pick alternatively in 
 * 🔍 **More Diverse Recs**: Avoids filter bubbles, improves discovery.
 * ⚡ **Real-Time Relevance**: Adapts to both long-term and session-based context.
 * 💰 **Boosts Sales**: Higher CTR, AOV, and user retention.
-  
+
+[View Beam Search implementation](assets/beam_search.py)
+
 ---
 
 ## 4. Search with filters
@@ -253,7 +267,28 @@ Samsung Bitmap:  1 0 1 0 0 0 1 0
 AND Result:      1 0 1 0 0 0 0 0 → Product IDs: 0, 2
 </code></pre>
 
+**Time Complexity:**
+- Preprocessing (bitmap creation): O(n) per attribute-value (once)
+- Query Time (bitwise ops):
+- AND, OR, NOT on bitmaps: O(n / word_size) → practically O(1) with SIMD/word-level ops.
+In practice: Extremely fast due to CPU-level vectorized operations (AVX, SSE).
 
+**Space Complexity:** 
+- Each bitmap takes n bits → n / 8 bytes
+- For a attribute-value pairs: Total Space = a * n / 8 bytes
+
+Can compress bitmaps with Roaring Bitmaps, WAH, or EWAH for low-density cases.
+
+
+**Business Advantages**
+- ⚡ Fast Filtering: Instantaneous filter results, even with millions of products.
+- 📉 Low Memory Use: Bitmaps are compact—ideal for large catalogs.
+- 📈 Scalable: Easily supports complex, multi-attribute filters.
+- 🤝 Great UX: Real-time filtering keeps users engaged.
+- 🧠 Easy Combination: Simple AND/OR logic for compound filters.
+- 🔄 Dynamic Updates: Easy to update for new attributes or products.
+
+[View implementation](assets/swf.py)
 ---
 
 ## 5. Category-wise navigation
@@ -275,26 +310,39 @@ DFS (Depth-First Search):
 -	Used to traverse the category tree to load subcategories in-depth (e.g., preloading an entire branch).-
 -	Helpful for lazy loading or recursive rendering.
 
-🔁 Time Complexity:
-	•	O(N + E) in DAGs
-	•	In a Tree, since E = N - 1, this simplifies to O(N)
-(We visit each node and edge once.)
+**Time Complexity:**
+- O(N + E) in DAGs
+- In a Tree, since E = N - 1, this simplifies to O(N) (We visit each node and edge once.)
 
-🧠 Space Complexity:
-	•	O(h) for recursive DFS (call stack space).
-	•	Worst case: height h = N (skewed tree)
-	•	O(N) for explicit stack or visited set in DAGs (to avoid cycles/repetition)
- 
+**Space Complexity:**
+- O(h) for recursive DFS (call stack space).
+- Worst case: height h = N (skewed tree)
+- O(N) for explicit stack or visited set in DAGs (to avoid cycles/repetition)
+
+[View DFS implementation](assets/dfs.cpp)
+
 BFS (Breadth-First Search):
 -	Useful for level-by-level traversal, e.g., rendering main categories first.
 -	Helps with UI optimization when menus are loaded incrementally.
 
-🔁 Time Complexity:
-	•	O(N + E) – All nodes and edges are visited.
+**Time Complexity:**
+- O(N + E) – All nodes and edges are visited.
 
-🧠 Space Complexity:
-	•	O(w) where w = maximum number of nodes at any level (i.e., tree width).
-	•	In worst case (flat structure): O(N)
+**Space Complexity:**
+- O(w) where w = maximum number of nodes at any level (i.e., tree width).
+- In worst case (flat structure): O(N)
+
+[View BFS implementation](assets/bfs.cpp)
+
+**Business Advantages**
+- 🧭 Enhanced Discoverability: Hierarchical menus guide users smoothly from broad to specific products, improving product visibility.
+- ⚡ Faster Navigation: DFS and BFS enable efficient traversal and dynamic loading of subcategories, reducing page load time.
+- 📈 Higher Engagement: Intuitive structure keeps users browsing longer, increasing the chance of conversion.
+- 🔍 Targeted Filtering: DAGs allow flexible categorization (e.g., “Wireless Earbuds” under both “Audio” and “Mobile Accessories”), enabling smarter filters.
+- 🌐 Clean URLs & SEO Boost: Structured category paths (e.g., /electronics/phones) improve indexing and click-through rates.
+- 🔄 Scalable Taxonomy: Easy to add new categories/subcategories without breaking the structure or causing duplication.
+
+
 ---
 
 ## 6. Optimising Delivery logistics
@@ -309,11 +357,18 @@ In amazons ecosystem,
 - Phase 1: Cluster deliveries by region → Bin Packing assigns packages to trucks.
 - Phase 2: Within each truck → VRP algorithm decides the optimal delivery path.
 
+**Time Complexity:** O(n²) to O(n³) (depending on method)
+
+**Space Complexity:** O(n²) (distance matrix or graph)
+
+
 **Business Advantages**
 - Reduced fuel and labor cost
 - Faster deliveries and higher customer satisfaction
 - Balanced load distribution across delivery fleet
 - Adaptable to dynamic changes (new orders, canceled deliveries)
+
+[View implementation](assets/vrp.py)
 
 ---
 
@@ -330,6 +385,15 @@ B or B+ trees can be used
 - Search: O(log n)
 - Insert: O(log n)	
 - Delete: O(log n)
+
+**Business Advantages**
+- 🔍 Faster Lookups: Quick access to user history (e.g., past orders, returns) via indexed search.
+- 🧾 Efficient Reporting: Enables fast filtering by date, product category, or order value.
+- 📈 Scalability: Balanced trees maintain performance even with millions of records.
+- 🔁 Smooth User Experience: Real-time account and order page loading improves satisfaction.
+- 🔐 Data Integrity: Structured insertion/deletion ensures consistent and reliable storage.
+
+[View implementation](assets/B-plus-tree.cpp)
 
 ---
 ## 8. Time slot management in scheduled deliveries
@@ -357,6 +421,15 @@ A **Segment Tree** can efficiently support:
 - Cancel: O(log n)
 - sAvailable: O(log n)
 
+**Business Advantages**
+- ⏱ Real-Time Slot Handling: Fast updates and checks help serve thousands of users instantly.
+- 🚫 Avoids Overbooking: Ensures slot capacity limits are respected even under heavy demand.
+- 📊 Efficient Resource Use: Maximizes delivery personnel and vehicle utilization by balancing loads.
+- 🔁 Flexible Rescheduling: Allows quick cancellation and rebooking without affecting system performance.
+- 💡 Scalable During Festivals or Sales: Handles rapid surges in slot bookings without slowing down.
+
+[View implementation](assets/seg-trees.cpp)
+
 ---
 
 ## 9. GDPR & Privacy Compliance
@@ -367,7 +440,7 @@ To ensure compliance with privacy regulations like GDPR, large-scale platforms l
 - Cryptographically secure
 - Scalable to billions of records
 
-This is where Merkle Trees and append-only logs can be used.
+This is where **Merkle Trees** and append-only logs can be used.
 
 <div style="text-align: center;">
 <img src="assets/images/m-tree.png" alt="min Heap" />
@@ -384,6 +457,8 @@ This is where Merkle Trees and append-only logs can be used.
 - Cryptographic verification of data integrity
 - Trustworthy user data tracking and access history
 
+[View implementation](assets/m-tree.cpp)
+
 --- 
 ## 10. Optimizing Content Delivery with Consistent Hashing + Virtual Nodes
 
@@ -396,7 +471,27 @@ Naive/modulo-based hashing breaks under node addition/removal:
 <img src="assets/images/cdn.png" alt="min Heap" />
 </div>
 
+### ⏱️ Time and Space Complexity: Consistent Hashing + Virtual Nodes
 
+| Operation                        | Time Complexity              | Space Complexity         |
+|----------------------------------|-------------------------------|---------------------------|
+| **Hashing a Key**               | `O(1)`                        | `O(1)`                    |
+| **Placing vnodes on ring**      | `O(N log N)` (initial sort)  | `O(V)` → V = total vnodes |
+| **Key Lookup (binary search)**  | `O(log V)`                   | `O(V)`                    |
+| **Adding a node**               | `O(log V)` per vnode added   | `O(k)` → k = vnodes added |
+| **Removing a node**             | `O(log V)` per vnode removed | `O(k)`                    |
+| **Reassignment of keys**        | `~O(K/V)`                    | —                         |
+
+**Legend**:
+- `N`: Number of servers  
+- `V`: Number of virtual nodes  
+- `K`: Total number of keys  
+- `k`: Number of vnodes added/removed
+
+**Notes**
+- Vnodes ensure **balanced key distribution** even with uneven server capacity.
+- **Key lookups** are fast due to binary search on sorted vnode positions.
+- **Adding/removing nodes** only affects a small portion of the ring (~`1/N` of keys).
 
 **Business advantages**
 - Balanced load prevents server overload and cuts costs
@@ -406,6 +501,8 @@ Naive/modulo-based hashing breaks under node addition/removal:
 - Reliable failover and fault testing
 - Faster global content delivery
 - Reduced operational and cloud expenses
+
+[View implementation](assets/vnodes.py)
 
 ---
 
@@ -436,3 +533,25 @@ Store user wishlists or interest tags in a hash set.
 
 **Time n Space Complexity**
 - HashSet lookup: O(1) per item		O(W) for user wishlist
+
+**Business Advantages**
+- 🎯 Highly Targeted Marketing: Sends relevant offers only when users enter specific locations, increasing conversion rates.
+- 📱 Improved User Engagement: Timely notifications boost app interaction and customer loyalty.
+- 🚀 Efficient Spatial Queries: Fast location lookups ensure real-time responsiveness without lag.
+- 🔄 Personalized Experience: Combines user preferences (wishlist) with physical context for smarter promotions.
+- 💸 Cost-Effective Campaigns: Reduces wasted advertising by focusing on users who are physically near relevant products.
+- 📈 Increased Sales: Drives foot traffic and impulse purchases at geofenced stores.
+
+
+[View implementation](assets/kd-trees.cpp)
+
+---
+
+# Learnings
+
+In this portfolio, I’ve explored how the concepts I learned in Data Structures and Algorithms (DSA) and Advanced Problem Solving (APS) can be directly applied to real-world business problems. Each section focuses on a specific use case—from optimizing product search using bitmap filtering, to dynamic pricing with segment trees, to efficient content delivery through consistent hashing and virtual nodes. I’ve tried to connect theoretical knowledge to practical applications by identifying which algorithms solve which business challenges most effectively. This helped me understand not just how these algorithms work, but when and why to use them. By linking what I’ve studied to actual industry scenarios across e-commerce, logistics, digital systems, and cloud computing, I’ve realized how important it is to pick the right algorithm for the right context. This portfolio reflects my effort to think like a system designer, not just a coder—and has made me more confident in using DSA concepts to build efficient, scalable solutions.
+
+---
+
+# References
+
