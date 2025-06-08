@@ -118,7 +118,7 @@ A Trie is a tree-like data structure where each node represents a character. Eac
   - O(K log K) to retrieve top-K suggestions using a min-heap
 - LRU Cache access/update: O(1) (average, using a hash map + doubly linked list)
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - ⚡ Ultra-Fast Experience: Real-time suggestions under 100ms keep users engaged, reducing bounce rates.
 - 🧠 Personalized Search: Region and user-history-based completions increase relevance, leading to higher conversion.
 - 💰 Boosts Sales: Smart suggestions drive product discovery, upselling, and impulse purchases.
@@ -143,7 +143,7 @@ A BK-Tree is a tree structure designed for fast similarity searches based on edi
 - Search: O(k log n) where k is small and depends on tolerance (edit threshold)
 - Much faster than checking all words with brute force.
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - 🛍️ Improved User Experience: Users get accurate results even with misspellings (e.g., “iphne” → “iPhone”), reducing friction.
 - 📈 Higher Conversion Rates: Correcting typos increases the chances that users find the right product and make a purchase.
 - ⚡ Faster Recovery from Input Errors: Real-time typo correction avoids "zero results" scenarios that can lead to user drop-off.
@@ -233,7 +233,7 @@ It involves constructing a 2D grid of products, where each cell corresponds to a
 ### Combining Collaborative Filtering and CERT
 Once we have both the lists, we can combine the lists, or pick alternatively in **Round Robin** fashion.
 
-#### **Business Advantages**
+#### **Inferences and Business Advantages**
 * 🎯 **Better Personalization**: Combines user behavior (CF) with product meaning (CERT).
 * ❄️ **Solves Cold Start**: CERT handles new users/products via embeddings.
 * 🔍 **More Diverse Recs**: Avoids filter bubbles, improves discovery.
@@ -281,7 +281,7 @@ In practice: Extremely fast due to CPU-level vectorized operations (AVX, SSE).
 Can compress bitmaps with Roaring Bitmaps, WAH, or EWAH for low-density cases.
 
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - ⚡ Fast Filtering: Instantaneous filter results, even with millions of products.
 - 📉 Low Memory Use: Bitmaps are compact—ideal for large catalogs.
 - 📈 Scalable: Easily supports complex, multi-attribute filters.
@@ -335,7 +335,7 @@ BFS (Breadth-First Search):
 
 [View BFS implementation](assets/bfs.cpp)
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - 🧭 Enhanced Discoverability: Hierarchical menus guide users smoothly from broad to specific products, improving product visibility.
 - ⚡ Faster Navigation: DFS and BFS enable efficient traversal and dynamic loading of subcategories, reducing page load time.
 - 📈 Higher Engagement: Intuitive structure keeps users browsing longer, increasing the chance of conversion.
@@ -363,7 +363,7 @@ In amazons ecosystem,
 **Space Complexity:** O(n²) (distance matrix or graph)
 
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - Reduced fuel and labor cost
 - Faster deliveries and higher customer satisfaction
 - Balanced load distribution across delivery fleet
@@ -387,7 +387,7 @@ B or B+ trees can be used
 - Insert: O(log n)	
 - Delete: O(log n)
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - 🔍 Faster Lookups: Quick access to user history (e.g., past orders, returns) via indexed search.
 - 🧾 Efficient Reporting: Enables fast filtering by date, product category, or order value.
 - 📈 Scalability: Balanced trees maintain performance even with millions of records.
@@ -422,7 +422,7 @@ A **Segment Tree** can efficiently support:
 - Cancel: O(log n)
 - sAvailable: O(log n)
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - ⏱ Real-Time Slot Handling: Fast updates and checks help serve thousands of users instantly.
 - 🚫 Avoids Overbooking: Ensures slot capacity limits are respected even under heavy demand.
 - 📊 Efficient Resource Use: Maximizes delivery personnel and vehicle utilization by balancing loads.
@@ -453,7 +453,7 @@ This is where **Merkle Trees** and append-only logs can be used.
 - Add Entry (Append-only): O(log n) (rebuilding partial tree paths)
 - Verify Root Integrity: O(1) (comparing root hash)
 
-**Business advantages**
+#### **Inferences and Business Advantages**
 - mmutable audit trails
 - Cryptographic verification of data integrity
 - Trustworthy user data tracking and access history
@@ -494,7 +494,7 @@ Naive/modulo-based hashing breaks under node addition/removal:
 - **Key lookups** are fast due to binary search on sorted vnode positions.
 - **Adding/removing nodes** only affects a small portion of the ring (~`1/N` of keys).
 
-**Business advantages**
+#### **Inferences and Business Advantages**
 - Balanced load prevents server overload and cuts costs
 - Seamless scaling with minimal downtime
 - Efficient hardware use via weighted distribution
@@ -535,7 +535,7 @@ Store user wishlists or interest tags in a hash set.
 **Time n Space Complexity**
 - HashSet lookup: O(1) per item		O(W) for user wishlist
 
-**Business Advantages**
+#### **Inferences and Business Advantages**
 - 🎯 Highly Targeted Marketing: Sends relevant offers only when users enter specific locations, increasing conversion rates.
 - 📱 Improved User Engagement: Timely notifications boost app interaction and customer loyalty.
 - 🚀 Efficient Spatial Queries: Fast location lookups ensure real-time responsiveness without lag.
